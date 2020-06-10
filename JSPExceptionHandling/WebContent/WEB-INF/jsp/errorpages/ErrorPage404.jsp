@@ -8,7 +8,6 @@
 <title>JavaLive JSPExceptionHendling</title>
 </head>
 <body>
-Source not found............
-<b><% exception.printStackTrace(response.getWriter()); %></b>
+Oooppssssss!!!!!!!! Requested source not found............
 </body>
 </html>
