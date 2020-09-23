@@ -11,8 +11,6 @@
 		<error-code>404</error-code>
 		<location>/ErrorPage404.jsp</location>
 	</error-page>
-	<!-- <error-page> <error-code>404</error-code> <location>/SourceNotFound.jsp</location> 
-		</error-page> -->
 	<error-page>
 		<exception-type>java.lang.ArithmeticException</exception-type>
 		<location>/ArithmeticException.jsp</location>
