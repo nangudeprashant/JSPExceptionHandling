@@ -1,3 +1,4 @@
+<%@page import="java.sql.SQLException"%>
 <%@ page errorPage="Error.jsp"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -8,18 +9,22 @@
 <title>JavaLive JSPExceptionHendling</title>
 </head>
 <body>
- <% int x=10, y=1;
+  <% int x=10, y=1;
         if (x == 10)
    {
-      throw new RuntimeException("Error condition!!!");
-   }else if(x>y){
-	   x=x/y;
+      throw new RuntimeException("Error condition!!!");//It leads to calling 'Error.jsp'
+   }
+   else if(x==5){
+	   throw new SQLException("This is SQLException.");//It leads to calling 'SQLException.jsp'
+   }else if(x>y){//Condition for ArithmeticException when y=0. It leads to calling 'ArithmeticException.jsp'
+ 	   x=x/y;
    } 
  %>
-
-<%-- <jsp:forward page="display.jsp"/>--%>
-
-<br/>
+ <br/>
 The sum is <%= x %>
+
+<%-- <jsp:forward page="Display1.jsp"/> <!-- It leads to calling 'ErrorPage404.jsp'--> --%> 
+
+
 </body>
 </html>
