@@ -9,5 +9,6 @@
 </head>
 <body>
 SQL Exception Page.
+<%-- <%= exception.getMessage() %> --%>
 </body>
 </html>

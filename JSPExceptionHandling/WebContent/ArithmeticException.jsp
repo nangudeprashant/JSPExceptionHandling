@@ -9,6 +9,6 @@
 </head>
 <body>
 Arithmetic Exception Page...........
-<% exception.printStackTrace(response.getWriter()); %>
+<%= exception.getMessage() %>
 </body>
 </html>
